@@ -10,4 +10,6 @@ int num = Convert.ToInt32(Console.ReadLine());
 int firstDigit = num / 100; //456 / 100 = 4.56
 int lastDigit = num % 10; // 456 % 10 = 450 + 6
 
-Console.WriteLine(firstDigit + lastDigit);
+int result = firstDigit + lastDigit;
+
+Console.WriteLine("Сумма первой и последней цифры трехзначного числа =" + result);

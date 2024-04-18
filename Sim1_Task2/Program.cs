@@ -4,12 +4,19 @@
 //782 => 9
 //918 => 17
 
-
-Console.WriteLine("Введите трехзначное число");
+Console.WriteLine("Введите трезначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int firstDigit = num / 100; //456 / 100 = 4.56
-int lastDigit = num % 10; // 456 % 10 = 450 + 6
 
-int result = firstDigit + lastDigit;
+if (num >= 100 && num <= 999) //if (num > 99 && num < 1000)
+{
+    int firstDigit = num / 100; //456/10=4.56
+    int lastDigit = num % 10; // 456 % 10=450+6
 
-Console.WriteLine("Сумма первой и последней цифры трехзначного числа =" + result);
+    int result = firstDigit + lastDigit;
+
+    Console.WriteLine($"Сумма первой и последней цифры трехзначного числа = {result}");
+}
+else
+{
+    Console.WriteLine("Ошибка! Число не трехзначное.");
+}
